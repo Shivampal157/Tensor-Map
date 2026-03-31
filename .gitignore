@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# TensorMap backend runtime
+tensormap/backend/.venv/
+tensormap/backend/**/*.db
+tensormap/backend/checkpoints/
+tensormap/backend/exports/
+tensormap/backend/tensormap.db
+
+# Node / frontend
+tensormap/frontend/node_modules/
+tensormap/frontend/dist/
+*.log
+npm-debug.log*
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Env
+.env
+.env.local

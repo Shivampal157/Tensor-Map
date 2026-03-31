@@ -1,0 +1,28 @@
+TensorMap backend — how to start (avoid paste errors)
+=====================================================
+
+Problem you may have seen
+-------------------------
+If two commands are pasted on ONE line with no newline, the shell runs gibberish, e.g.:
+  tensormappython          (missing space: should be "tensormap" + "python")
+  ...requirements-ml.txtconda...   (second command glued to the first)
+
+Fix: run ONE of the options below.
+
+Option A — single script (recommended)
+--------------------------------------
+  cd path/to/tensormap/backend
+  bash start.sh
+
+Option B — two separate lines (press Enter after line 1)
+--------------------------------------------------------
+  conda run -n tensormap python -m pip install -r requirements-core.txt -r requirements-ml.txt
+
+  (requirements-core.txt includes fpdf2 + python-docx for PDF/Word export.)
+
+  conda run -n tensormap python -m uvicorn main:socket_app --host 127.0.0.1 --port 8000
+
+Then open: http://127.0.0.1:8000/api/layers
+
+Note: "Requirement already satisfied" from pip is normal — not an error.
+Training needs TensorFlow; first import can take 10–30s — wait for uvicorn "Uvicorn running" line.

@@ -1,0 +1,3 @@
+# Full stack: core API + ML. Requires Python 3.10–3.12 for TensorFlow.
+-r requirements-core.txt
+-r requirements-ml.txt

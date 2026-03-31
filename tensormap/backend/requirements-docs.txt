@@ -1,0 +1,3 @@
+# Report export deps are listed in requirements-core.txt (installed by start.sh).
+# This file is kept so older docs that mention `pip install -r requirements-docs.txt` still work.
+-r requirements-core.txt

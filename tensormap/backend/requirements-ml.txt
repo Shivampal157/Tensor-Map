@@ -1,0 +1,5 @@
+# TensorFlow wheels exist for Python 3.9–3.12 on macOS (not 3.13+ on PyPI as of 2026).
+# If this fails: conda create -n tensormap python=3.12 -y && conda activate tensormap
+tensorflow==2.20.0
+tf2onnx==1.17.0
+onnx>=1.16.0,<2

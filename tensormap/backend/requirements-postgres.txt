@@ -1,0 +1,3 @@
+# Install when using DATABASE_URL=postgresql://... (after requirements-core.txt).
+# Prefer the same Python as your env (3.10–3.12 wheels are widely available).
+psycopg2-binary>=2.9.9,<3
